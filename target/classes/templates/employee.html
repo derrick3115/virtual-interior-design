@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Interior Design Consultant</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-left: 2em;
+            padding-right: 2em;
+            padding-bottom: 0.4em;
+            background-color: #171717;
+            border-radius: 20px;
+            transition: .4s ease-in-out;
+            height: 500px;
+            width: 500px;
+        }
+
+        .form:hover {
+            transform: scale(1.05);
+            border: 1px solid black;
+        }
+
+        #heading {
+            text-align: center;
+            margin: 2em;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .field {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+            border-radius: 35px;
+            padding: 0.6em;
+            border: none;
+            outline: none;
+            color: white;
+            background-color: #171717;
+            box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+        }
+
+        .input-icon {
+            height: 1.3em;
+            width: 1.3em;
+            fill: white;
+        }
+
+        .input-field {
+            background: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            color: white;
+        }
+
+        .form .btn {
+            display: flex;
+            justify-content: center;
+            /*flex-direction: row;*/
+            margin-top: -20px;
+            border-radius: 100px;
+        }
+
+        .button1 {
+            padding: 0.5em;
+            padding-left: 1.1em;
+            padding-right: 1.1em;
+            border-radius: 5px;
+            margin-right: 0.5em;
+            border: none;
+            outline: none;
+            transition: .4s ease-in-out;
+            background-color: #252525;
+            color: white;
+        }
+
+        .button1:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .button2 {
+            padding: 0.5em;
+            padding-left: 2.3em;
+            padding-right: 2.3em;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            transition: .4s ease-in-out;
+            background-color: #252525;
+            color: white;
+        }
+
+        .button2:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .button3 {
+            margin-bottom: 3em;
+            padding: 0.5em;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            transition: .4s ease-in-out;
+            background-color: #252525;
+            color: white;
+        }
+
+        .button3:hover {
+            background-color: red;
+            color: white;
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 100px;
+            background-color: #171717;
+            align-items: center; }
+        .nav{ font-family: 'Prototype'; }
+        .nav a{
+            text-decoration:  none;
+            color: white;
+            font-size: 15px; }
+        .nav ul, li{
+            justify-content: center;
+            display: flex;
+            padding-right: 15px;
+            color: white; }
+        .nav li a:hover{
+            color: #ffba19;
+            font-size: 18px;}
+        .logo h1{
+            color: white;
+        }
+    </style>
+</head>
+<body  style="background: #607D8B">
+<center>
+
+    <div class="box">
+        <div class="logo">
+            <h1>Virtual Interior Design Consultant</h1>
+        </div>
+        <nav class="nav">
+            <ul>
+                <!-- <li><a href="index.html">home</a></li>-->
+
+                <li><a th:href="@{/index}">Logout</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+
+        <center>
+            <form th:action="@{/emp}" th:object="${student}" method="post" class="form">
+                <p id="heading">Application form</p>
+
+                <div style="color: white" th:if="${param.success}">
+                    <p>submitted successfully!</p>
+                </div>
+
+                <div style="color: white" th:if="${param.error}">
+                    <p>something went wrong!</p>
+                </div>
+                <div class="field">
+                    <input th:field="*{orderId}" autocomplete="off" placeholder="Order ID" name="studentID" class="input-field" type="text" required>
+                </div>
+                <div class="field">
+
+                    <input  th:field="*{fName}" placeholder="Enter fname" name="fName" class="input-field" type="text" required>
+                </div>
+                <div class="field">
+
+                    <input th:field="*{lName}" autocomplete="off" placeholder="Enter lname" name="Enter lname" class="input-field" type="text" required>
+                </div>
+                <div class="field">
+
+                    <input th:field="*{yard}" autocomplete="off" placeholder="Enter Yard Measures" name="Yard Measures" class="input-field" type="text" required>
+                </div>
+                <div class="field">
+
+                    <input th:field="*{orderDate}" autocomplete="off" placeholder="Enter order_date" name="dob" class="input-field" type="date" required>
+                </div>
+                <div class="field">
+
+                    <input th:field="*{picture}" autocomplete="off"  name="picture" class="input-field" type="file" accept="application/png, application/jpeg">
+                </div>
+
+                <div class="btn">
+                    <button class="button1">submit</button> <br>
+                </div>
+
+
+            </form>
+        </center>
+    </div>
+
+    </div>
+</center>
+</body>
+</html>

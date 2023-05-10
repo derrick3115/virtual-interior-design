@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <property name="connection.url">jdbc:postgresql://localhost:5432/design</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">derrick</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+    <mapping class="com.derrick.model.Signup" />
+  </session-factory>
+</hibernate-configuration>

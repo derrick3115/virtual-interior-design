@@ -1,0 +1,135 @@
+/* Fonts Start */
+@import url('https://fonts.googleapis.com/css?family=Poiret One');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+/* Fonts End */
+/* Banner Start */
+
+#banner {
+    background: linear-gradient(to left, #ECE9E6, #FFFFFF);
+    margin-top: -2.5em;
+    margin-left: -0.46875em;
+    height: 3.125em;
+    width: 101.001%;
+    border-radius: 35px;
+    color: #fe8c00;
+    font-family: Raleway;
+    font-size: 32px;
+    padding-top: 2.1875em;
+    position: fixed;
+    opacity: 0.92;
+    z-index: 1;
+}
+
+#title {
+    font-family: Poiret One;
+    font-size: 45.5px;
+    margin-top: 0em;
+}
+
+#subtitle {
+    font-family: Poiret One;
+    font-size: 18px;
+    color: #fe8c00;
+    margin-top: -1.75em;
+}
+/* Banner End */
+/* Body Start */
+
+body {
+    background: linear-gradient(to left, #1D267D, #394867);
+    /*background: url("/static/pictures/pexels.jpg");*/
+}
+
+
+#bodymessage1 {
+    font-family: Raleway;
+    padding-top: 7.6em;
+    margin-left: 7em;
+    font-size: 25px;
+    margin-right: 7em;
+    text-align: center;
+    color: white;
+}
+
+#bodymessage2 {
+    font-family: Raleway;
+    margin-left: 8em;
+    margin-right: 8em;
+    text-align: center;
+    color: white;
+}
+
+#login,
+#signup {
+    width: 5em;
+    height: 2.5em;
+    border-radius: 5px;
+    border: none;
+    font-size: 30px;
+}
+
+#login {
+    background-color: white;
+    color: black;
+    font-family: Raleway;
+}
+
+#signup {
+    background: darkslategrey;
+    color: white;
+    font-family: Raleway;
+}
+
+#login, #signup {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+#login:hover,
+#login:focus,
+#login:active {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+#signup:hover,
+#signup:focus,
+#signup:active {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+/* Body End */
+/* Footer Start */
+
+#footer {
+    background: url("/static/pictures/pexels.jpg");
+    color: white;
+    width: 100%;
+    font-size: 21.5px;
+    height: 8.55813953488372em;
+    margin-left: -9.29em;
+    padding-top: 0.3488372093023256em;
+    margin-top: 6.604651162790698em;
+    opacity: 0.92;
+    position: absolute;
+    border-radius: 15px 15px 0px 0px;
+}
+
+#footertitle,
+#footercontent {
+    text-align: left;
+    margin-left: 6.976744186046512em;
+    font-family: Raleway;
+}
+
+#footercontent {
+    margin-top: -0.46511627906976744em;
+}
+/* Footer End */
